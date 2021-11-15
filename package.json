@@ -7,7 +7,9 @@
     "start": "node backend/server",
     "server": "nodemon backend/server",
     "client": "npm start --prefix frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node backend/seeder",
+    "data:delete": "node backend/seeder --d"
   },
   "repository": {
     "type": "git",
@@ -20,8 +22,13 @@
   },
   "homepage": "https://github.com/Dinesh1784/proshop-MERN#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
     "dotenv": "^10.0.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-async-handler": "^1.2.0",
+    "mongoose": "^6.0.12",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "concurrently": "^6.3.0",
